@@ -1,0 +1,253 @@
+' ******************************************************************************
+' swxJRNL.swj - journal recorded on 03/09/25 by Andrew Liang
+' *****************************************************************************
+Dim swApp As Object
+
+Dim Part As Object
+Dim boolstatus As Boolean
+Dim longstatus As Long, longwarnings As Long
+
+Sub main()
+
+Set swApp = Application.SldWorks
+
+swApp.ActivateDoc2 "Sensor Mount", False, longstatus
+Set Part = swApp.ActiveDoc
+Set Part = swApp.ActiveDoc
+Dim myModelView As Object
+Set myModelView = Part.ActiveView
+myModelView.FrameLeft = 0
+myModelView.FrameTop = 0
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+
+' Open
+Set Part = swApp.OpenDoc6("C:\Courses\Year 3\MSE 2202B\Git\project-pdf-team-005-5\Solidworks\Sensor\Ultrasonic Sensor.SLDPRT", 1, 0, "", longstatus, longwarnings)
+
+' New Document
+Dim swSheetWidth As Double
+swSheetWidth = 0.2969999999999999862
+Dim swSheetHeight As Double
+swSheetHeight = 0.2099999999999999922
+Set Part = swApp.NewDocument("C:\ProgramData\SolidWorks\SOLIDWORKS 2024\templates\Drawing.drwdot", 12, swSheetWidth, swSheetHeight)
+Dim swDrawing As DrawingDoc
+Set swDrawing = Part
+Set swDrawing = Part
+Dim swSheet As sheet
+Set swSheet = swDrawing.GetCurrentSheet()
+swSheet.SetProperties2 12, 12, 1, 1, False, swSheetWidth, swSheetHeight, True
+swSheet.SetTemplateName "C:\ProgramData\SolidWorks\SOLIDWORKS 2024\lang\english\sheetformat\a4 - landscape.slddrt"
+swSheet.ReloadTemplate True
+boolstatus = Part.GenerateViewPaletteViews("C:\Courses\Year 3\MSE 2202B\Git\project-pdf-team-005-5\Solidworks\Sensor\Sensor Mount.SLDPRT")
+Part.EditTemplate
+Part.EditSketch
+boolstatus = Part.Extension.SelectByID2("DetailItem209@Sheet Format1", "NOTE", 0.1255918032786885186, 0.05642459016393441829, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("DetailItem212@Sheet Format1", "NOTE", 0.1234180327868852067, 0.04399999999999999745, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+Part.SetPickMode
+boolstatus = Part.Extension.SelectByID2("Sheet Format1", "SHEET", 0.1272630920438077018, 0.04196401363753619884, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("DetailItem226@Sheet Format1", "NOTE", 0.1248402054157121827, 0.04196401363753619884, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("DetailItem223@Sheet Format1", "NOTE", 0.1868150949554189255, 0.02117819677545348944, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("DetailItem225@Sheet Format1", "NOTE", 0.1843922083273233925, 0.01314441479808409197, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("DetailItem225@Sheet Format1", "NOTE", 0.1840096472807820072, 0.01237929270500126577, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("DetailItem238@Sheet Format1", "NOTE", 0.249351529459870408, 0.03613519512067890627, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("Sheet Format1", "SHEET", 0.1971675998505505178, 0.1781488435663339254, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("Sheet Format1", "SHEET", 0.2108514780948091694, 0.1410583314832117574, 0, False, 0, Nothing, 0)
+Part.EditTemplate
+Part.EditSheet
+Part.EditSketch
+Part.ClearSelection2 True
+Part.SetPickMode
+' MSGBOX
+' Save changes to Sensor Mount - Sheet1?
+
+
+' Close Document
+Set swDrawing = Nothing
+Set Part = Nothing
+swApp.CloseDoc "Sensor Mount - Sheet1"
+Set Part = swApp.ActiveDoc
+Set myModelView = Part.ActiveView
+myModelView.FrameLeft = 0
+myModelView.FrameTop = 0
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+swApp.ActivateDoc2 "Sensor Mount", False, longstatus
+Set Part = swApp.ActiveDoc
+
+' Redraw
+Part.GraphicsRedraw2
+
+' New Document
+swSheetWidth = 0.2969999999999999862
+swSheetHeight = 0.2099999999999999922
+Set Part = swApp.NewDocument("C:\ProgramData\SolidWorks\SOLIDWORKS 2024\templates\Drawing.drwdot", 12, swSheetWidth, swSheetHeight)
+Set swDrawing = Part
+Set swDrawing = Part
+Set swSheet = swDrawing.GetCurrentSheet()
+swSheet.SetProperties2 12, 12, 1, 1, False, swSheetWidth, swSheetHeight, True
+swSheet.SetTemplateName "C:\ProgramData\SolidWorks\SOLIDWORKS 2024\lang\english\sheetformat\a4 - landscape.slddrt"
+swSheet.ReloadTemplate True
+boolstatus = Part.GenerateViewPaletteViews("C:\Courses\Year 3\MSE 2202B\Git\project-pdf-team-005-5\Solidworks\Sensor\Sensor Mount.SLDPRT")
+Dim myView As Object
+Set myView = Part.DropDrawingViewFromPalette2("Drawing View1", 0.1602049180327868583, 0.1182934426229508007, 0)
+boolstatus = Part.Extension.SelectByID2("Drawing View1", "DRAWINGVIEW", 0, 0, 0, False, 0, Nothing, 0)
+Set myView = Part.CreateUnfoldedViewAt3(0.1602049180327868583, 0.1660394754098360459, 0, False)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("Drawing View1", "DRAWINGVIEW", 0, 0, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View1")
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("Drawing View1", "DRAWINGVIEW", 0.1379053770491803221, 0.1174005245901639238, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("Drawing View1", "DRAWINGVIEW", 0.1357382950819672196, 0.1135479344262295132, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SketchBoxSelect("-0.012233", "-0.002373", "0.000000", "-0.034145", "-0.008272", "0.000000")
+boolstatus = Part.Extension.SelectByID2("DetailItem241@Drawing View1", "CENTERMARKSYM", 0.1371830163934426028, 0.1154742295081967185, 0, False, 0, Nothing, 0)
+Part.SetPickMode
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet1")
+Part.SetPickMode
+boolstatus = Part.ActivateView("Drawing View1")
+boolstatus = Part.ActivateView("Drawing View2")
+boolstatus = Part.Extension.SelectByRay(0.1062182653092619555, 0.1788783205074156168, 250.0109999999999957, 0, 0, -1, 0.0004645384136574138949, 1, False, 0, 0)
+boolstatus = Part.Extension.SelectByRay(0.1122299388977696655, 0.1531920788110645026, 250.0109999999999957, 0, 0, -1, 0.0004645384136574138949, 1, True, 0, 0)
+Dim myDisplayDim As Object
+Set myDisplayDim = Part.AddDimension2(0.05238646090307927383, 0.1656253128219141724, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.ActivateView("Drawing View2")
+boolstatus = Part.Extension.SelectByID2("DetailItem242@Drawing View2", "CENTERMARKSYM", 0.1053984916381018044, 0.1663084575478809557, 0, False, 0, Nothing, 0)
+boolstatus = Part.DeSelectByID("DetailItem242@Drawing View2", "CENTERMARKSYM", 0.1053984916381018044, 0.1663084575478809557, 0)
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.ActivateView("Drawing View2")
+boolstatus = Part.Extension.SelectByRay(0.09501469180340665899, 0.1689044075083005469, 250.0109999999999388, 0, 0, -1, 0.0004645384136574138949, 1, False, 0, 0)
+boolstatus = Part.Extension.SelectByRay(0.2253587055178692955, 0.1669916022755935647, 250.0109999999999388, 0, 0, -1, 0.0004645384136574138949, 1, True, 0, 0)
+Set myDisplayDim = Part.AddDimension2(0.1540383961269368995, 0.1978697438875464121, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.Extension.SelectByID2("RD2@Drawing View2", "DIMENSION", 0.1530819935105834084, 0.2010122096269936209, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.ActivateView("Drawing View2")
+boolstatus = Part.Extension.SelectByRay(0.09474143391301995121, 0.164942168097693187, 250.0109999999999388, 0, 0, -1, 0.0004645384136574138949, 1, False, 0, 0)
+boolstatus = Part.Extension.SelectByID2("DetailItem242@Drawing View2", "CENTERMARKSYM", 0.1053984916381018044, 0.1668549733286543713, 0, True, 0, Nothing, 0)
+Set myDisplayDim = Part.AddDimension2(0.07028485272340903589, 0.1866661703816911433, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.ActivateView("Drawing View2")
+boolstatus = Part.Extension.SelectByRay(0.09528794969379339452, 0.1639857654813396959, 250.0109999999999388, 0, 0, -1, 0.0004645384136574138949, 1, False, 0, 0)
+boolstatus = Part.Extension.SelectByID2("DetailItem243@Drawing View2", "CENTERMARKSYM", 0.2157946793543342734, 0.1668549733286543713, 0, True, 0, Nothing, 0)
+Set myDisplayDim = Part.AddDimension2(0.1548581697980970506, 0.1866661703816911155, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet1")
+Part.ClearSelection2 True
+boolstatus = Part.ActivateView("Drawing View1")
+boolstatus = Part.ActivateView("Drawing View2")
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.ActivateView("Drawing View1")
+boolstatus = Part.Extension.SelectByRay(0.1196079019382109421, 0.1074213821712898531, 250.0065000000000168, 0, 0, -1, 0.0004645384136574138949, 1, False, 0, 0)
+Set myDisplayDim = Part.AddDimension2(0.1074479258160021544, 0.09252882714346816195, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateView("Drawing View2")
+boolstatus = Part.ActivateView("Drawing View1")
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByRay(0.1299917017729060598, 0.1023661111991356482, 250.0065000000000168, 0, 0, -1, 0.0004645384136574138949, 1, False, 0, 0)
+boolstatus = Part.Extension.SelectByRay(0.1265759781430721431, 0.09908701651449507153, 250.0065000000000168, 0, 0, -1, 0.0004645384136574138949, 1, True, 0, 0)
+Set myDisplayDim = Part.AddDimension2(0.1133229704593165243, 0.0877468140617006509, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByRay(0.1171485809247305165, 0.1275058371147133329, 250.0065000000000168, 0, 0, -1, 0.0004645384136574138949, 1, False, 0, 0)
+boolstatus = Part.Extension.SelectByRay(0.2034980742869321735, 0.1279157239502934085, 250.0065000000000168, 0, 0, -1, 0.0004645384136574138949, 1, True, 0, 0)
+Set myDisplayDim = Part.AddDimension2(0.1595035539346711939, 0.07429344262295078938, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.ActivateView("Drawing View1")
+boolstatus = Part.Extension.SelectByRay(0.2186638872033948022, 0.1406222158532756394, 250.0065000000000168, 0, 0, -1, 0.0004645384136574138949, 1, False, 0, 0)
+boolstatus = Part.Extension.SelectByRay(0.186282827192569167, 0.096627695501014646, 250.0065000000000168, 0, 0, -1, 0.0004645384136574138949, 1, True, 0, 0)
+Set myDisplayDim = Part.AddDimension2(0.2577397655286948752, 0.1281889818389343461, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.ActivateView("Drawing View1")
+boolstatus = Part.Extension.SelectByRay(0.2155214214639475934, 0.1399390711273088284, 250.0065000000000168, 0, 0, -1, 0.0004645384136574138949, 1, False, 0, 0)
+boolstatus = Part.Extension.SelectByRay(0.2227627555591955022, 0.1365233474974749117, 250.0065000000000168, 0, 0, -1, 0.0004645384136574138949, 1, True, 0, 0)
+Set myDisplayDim = Part.AddDimension2(0.24720491803278688, 0.1562934426229508067, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet1")
+Part.SetPickMode
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.ActivateView("Drawing View1")
+boolstatus = Part.Extension.SelectByID2("RD4@Drawing View1", "DIMENSION", 0.255690331350794553, 0.1290087555100944972, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.ActivateView("Drawing View1")
+boolstatus = Part.Extension.SelectByRay(0.1970765138628443602, 0.107558011116483207, 250.0065000000000168, 0, 0, -1, 0.0004645384136574138949, 1, False, 0, 0)
+boolstatus = Part.Extension.SelectByRay(0.1928410165618503203, 0.09867712967891499598, 250.0065000000000168, 0, 0, -1, 0.0004645384136574138949, 1, False, 0, 0)
+boolstatus = Part.ActivateView("Drawing View2")
+boolstatus = Part.Extension.SelectByRay(0.09546844694731457248, 0.153497165249814882, 250.0109999999999957, 0, 0, -1, 0.0005446662572753241654, 3, False, 0, 0)
+boolstatus = Part.Extension.SelectByID2("DetailItem246@Drawing View2", "GTOL", 0.0667933704613489776, 0.1168122908609957322, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.ActivateView("Drawing View1")
+boolstatus = Part.Extension.SelectByRay(0.1170949012803053912, 0.1360358058254000357, 250.0065000000000168, 0, 0, -1, 0.0005446662572753241654, 3, False, 0, 0)
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.Extension.SelectByID2("Sheet1", "SHEET", 0.239087168438509079, 0.03847551943558644161, 0, False, 0, Nothing, 0)
+Part.EditTemplate
+Part.EditSketch
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("DetailItem238@Sheet Format1", "NOTE", 0.2438488239874092023, 0.03814712939773126643, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("Line212", "SKETCHSEGMENT", 0.1223445099809922082, 0.04307297996555897734, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("DetailItem226@Sheet Format1", "NOTE", 0.1259568003973992045, 0.04274458992770380217, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("Sheet Format1", "SHEET", 0.1799769616245764925, 0.022548602599610168, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("DetailItem223@Sheet Format1", "NOTE", 0.1834250570220558596, 0.01975728727784112349, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("DetailItem209@Sheet Format1", "NOTE", 0.1221803149620646206, 0.05522341136620068092, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+Part.SetPickMode
+Part.EditTemplate
+Part.EditSheet
+Part.EditSketch
+
+' Zoom To Fit
+Part.ViewZoomtofit2
+
+' Zoom To Fit
+Part.ViewZoomtofit2
+
+' Zoom To Fit
+Part.ViewZoomtofit2
+
+' Save As
+longstatus = Part.SaveAs3("C:\Courses\Year 3\MSE 2202B\Git\project-pdf-team-005-5\Solidworks\Sensor\Color Sensor Mount.SLDDRW", 0, 0)
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+Set Part = swApp.ActiveDoc
+Set myModelView = Part.ActiveView
+myModelView.FrameLeft = 0
+myModelView.FrameTop = 0
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+swApp.ActivateDoc2 "Sensor Mount", False, longstatus
+Set Part = swApp.ActiveDoc
+Set Part = swApp.ActiveDoc
+Set myModelView = Part.ActiveView
+myModelView.FrameLeft = 0
+myModelView.FrameTop = 33
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+swApp.ActivateDoc2 "Ultrasonic Sensor", False, longstatus
+Set Part = swApp.ActiveDoc
+swApp.ExitApp
+End Sub

@@ -1,0 +1,79 @@
+' ******************************************************************************
+' swxJRNL.swj - journal recorded on 03/16/25 by Andrew Liang
+' *****************************************************************************
+Dim swApp As Object
+
+Dim Part As Object
+Dim boolstatus As Boolean
+Dim longstatus As Long, longwarnings As Long
+
+Sub main()
+
+Set swApp = Application.SldWorks
+
+swApp.ActivateDoc2 "Rear_Wheels.SLDPRT", False, longstatus
+Set Part = swApp.ActiveDoc
+Set Part = swApp.ActiveDoc
+Dim myModelView As Object
+Set myModelView = Part.ActiveView
+myModelView.FrameLeft = 0
+myModelView.FrameTop = 0
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+boolstatus = Part.Extension.SelectByID2("Sketch1", "SKETCH", 0, 0, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Sketch1", "SKETCH", 0, 0, 0, False, 0, Nothing, 0)
+Part.EditSketch
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("D3@Sketch1@Rear_Wheels.SLDPRT", "DIMENSION", 0.005464779877603007097, 0.004807811804885701867, 0.01299999999999996818, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("D2@Sketch1@Rear_Wheels.SLDPRT", "DIMENSION", 0.008749620241189512426, -0.007435684095754908907, 0.01300000000000005318, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("D2@Sketch1@Rear_Wheels.SLDPRT", "DIMENSION", 0.009346863943659786123, -0.007017613504025715931, 0.01300000000000004971, False, 0, Nothing, 0)
+Dim myDimension As Object
+Set myDimension = Part.Parameter("D2@Sketch1")
+myDimension.SystemValue = 0.0015
+boolstatus = Part.Extension.SelectByID2("D3@Sketch1@Rear_Wheels.SLDPRT", "DIMENSION", 0.007674581576743014222, 0.004628638694144614207, 0.01299999999999996818, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+Part.SketchManager.InsertSketch True
+boolstatus = Part.FeatureManager.EditRollback(swMoveRollbackBarTo_e.swMoveRollbackBarToBeforeFeature, "Boss-Extrude2")
+
+' Redraw
+Part.GraphicsRedraw2
+
+' Redraw
+Part.GraphicsRedraw2
+
+' Redraw
+Part.GraphicsRedraw2
+
+' Redraw
+Part.GraphicsRedraw2
+
+' Redraw
+Part.GraphicsRedraw2
+
+' Redraw
+Part.GraphicsRedraw2
+
+' Named View
+Part.ShowNamedView2 "*Front", 1
+Part.ViewZoomtofit2
+boolstatus = Part.Extension.SelectByID2("Boss-Extrude1", "SOLIDBODY", 0, 0, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Boss-Extrude1", "SOLIDBODY", 0, 0, 0, False, 0, Nothing, 0)
+
+' Save As
+longstatus = Part.SaveAs3("C:\Courses\Year 3\MSE 2202B\Git\project-pdf-team-005-5\Solidworks\Wheels\Rear_Wheel_Fit_Test.SLDPRT", 0, 0)
+' MSGBOX
+' Triangles: 352
+' File Size: 17684 (Bytes)
+' File Format: Binary
+' Save C:\COURSES\YEAR 3\MSE 2202B\GIT\PROJECT-PDF-TEAM-005-5\SOLIDWORKS\WHEELS\REAR_WHEEL_FIT_TEST.STL?
+
+
+' Save As
+longstatus = Part.SaveAs3("C:\Courses\Year 3\MSE 2202B\Git\project-pdf-team-005-5\Solidworks\Wheels\Rear_Wheel_Fit_Test.STL", 0, 2)
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+Part.ClearSelection2 True
+swApp.ExitApp
+End Sub

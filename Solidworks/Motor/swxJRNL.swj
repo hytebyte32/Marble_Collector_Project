@@ -1,0 +1,335 @@
+' ******************************************************************************
+' swxJRNL.swj - journal recorded on 03/09/25 by Andrew Liang
+' *****************************************************************************
+Dim swApp As Object
+
+Dim Part As Object
+Dim boolstatus As Boolean
+Dim longstatus As Long, longwarnings As Long
+
+Sub main()
+
+Set swApp = Application.SldWorks
+
+swApp.ActivateDoc2 "Motor Mount", False, longstatus
+Set Part = swApp.ActiveDoc
+Set Part = swApp.ActiveDoc
+Dim myModelView As Object
+Set myModelView = Part.ActiveView
+myModelView.FrameLeft = 0
+myModelView.FrameTop = 0
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+
+' Open
+Set Part = swApp.OpenDoc6("C:\Courses\Year 3\MSE 2202B\Git\project-pdf-team-005-5\Solidworks\Motor\N20 3v-6v Motor.SLDPRT", 1, 0, "", longstatus, longwarnings)
+
+' New Document
+Dim swSheetWidth As Double
+swSheetWidth = 0.2969999999999999862
+Dim swSheetHeight As Double
+swSheetHeight = 0.2099999999999999922
+Set Part = swApp.NewDocument("C:\ProgramData\SolidWorks\SOLIDWORKS 2024\templates\Drawing.drwdot", 12, swSheetWidth, swSheetHeight)
+Dim swDrawing As DrawingDoc
+Set swDrawing = Part
+Set swDrawing = Part
+Dim swSheet As sheet
+Set swSheet = swDrawing.GetCurrentSheet()
+swSheet.SetProperties2 12, 12, 1, 1, False, swSheetWidth, swSheetHeight, True
+swSheet.SetTemplateName "C:\ProgramData\SolidWorks\SOLIDWORKS 2024\lang\english\sheetformat\a4 - landscape.slddrt"
+swSheet.ReloadTemplate True
+boolstatus = Part.GenerateViewPaletteViews("C:\Courses\Year 3\MSE 2202B\Git\project-pdf-team-005-5\Solidworks\Motor\Motor Mount.SLDPRT")
+Dim myView As Object
+Set myView = Part.DropDrawingViewFromPalette2("Drawing View1", 0.1480986885245901552, 0.1243632786885245922, 0)
+boolstatus = Part.Extension.SelectByID2("Drawing View1", "DRAWINGVIEW", 0, 0, 0, False, 0, Nothing, 0)
+Set myView = Part.CreateUnfoldedViewAt3(0.2301668852459015924, 0.1243632786885245922, 0, False)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("Drawing View1", "DRAWINGVIEW", 0, 0, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateView("Drawing View1")
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.ActivateView("Drawing View1")
+boolstatus = Part.Extension.SelectByRay(0.1403446041399108168, 0.1594430393988899852, 249.9954873304381806, 0, 0, -1, 0.0004912366850494822397, 1, False, 0, 0)
+boolstatus = Part.Extension.SelectByRay(0.1407780482737779892, 0.08936957109036090807, 249.9954873304381806, 0, 0, -1, 0.0004912366850494822397, 1, True, 0, 0)
+Dim myDisplayDim As Object
+Set myDisplayDim = Part.AddDimension2(0.06609868852459008237, 0.124478545931857601, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.ActivateView("Drawing View1")
+boolstatus = Part.Extension.SelectByRay(0.1429452689431139623, 0.1594430393988899852, 249.9954873304381806, 0, 0, -1, 0.0004912366850494822397, 1, False, 0, 0)
+boolstatus = Part.Extension.SelectByRay(0.1493024495731660739, 0.1405159788866894022, 250.0004873304381761, 0, 0, -1, 0.0004912366850494822397, 46, True, 0, 0)
+Set myDisplayDim = Part.AddDimension2(0.07532798405983226475, 0.124478545931857601, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.Extension.SelectByRay(0.1456904151242728318, 0.1592985580209342611, 249.9954873304381806, 0, 0, -1, 0.0004912366850494822397, 1, False, 0, 0)
+boolstatus = Part.Extension.SelectByRay(0.1422228620533353138, 0.1078631874686943604, 249.9954873304381806, 0, 0, -1, 0.0004912366850494822397, 1, True, 0, 0)
+Set myDisplayDim = Part.AddDimension2(0.08409868852459009836, 0.124478545931857601, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.ActivateView("Drawing View1")
+boolstatus = Part.Extension.SelectByRay(0.1497358937070332741, 0.1308357265636554412, 249.9954873304381806, 0, 0, -1, 0.0004912366850494822397, 1, False, 0, 0)
+boolstatus = Part.Extension.SelectByRay(0.149446930951121798, 0.118121365303551204, 249.9954873304381806, 0, 0, -1, 0.0004912366850494822397, 1, True, 0, 0)
+Set myDisplayDim = Part.AddDimension2(0.09179886114678550979, 0.124478545931857601, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.ActivateView("Drawing View2")
+Part.SetPickMode
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.ActivateView("Drawing View1")
+boolstatus = Part.Extension.SelectByRay(0.1542148164236608887, 0.1594430393988899852, 249.9954873304381806, 0, 0, -1, 0.0004912366850494822397, 1, False, 0, 0)
+Set myDisplayDim = Part.AddDimension2(0.1481465985495201976, 0.1873632786885246759, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.ActivateView("Drawing View1")
+boolstatus = Part.Extension.SelectByID2("DetailItem240@Drawing View1", "CENTERMARKSYM", 0.1481465985495202253, 0.1499072684520660892, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByRay(0.1361546441791946505, 0.1500517498317675558, 249.9954873304381806, 0, 0, -1, 0.0004912366850494822397, 1, True, 0, 0)
+Set myDisplayDim = Part.AddDimension2(0.1481465985495201976, 0.1813632786885246706, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.ActivateView("Drawing View1")
+boolstatus = Part.Extension.SelectByRay(0.1467017847699629285, 0.09774949101179325472, 249.9954873304381806, 0, 0, -1, 0.0004912366850494822397, 1, False, 0, 0)
+Set myDisplayDim = Part.AddDimension2(0.09685570937523604873, 0.07564384018282083177, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.ActivateView("Drawing View2")
+boolstatus = Part.Extension.SelectByRay(0.2177866227241821162, 0.1330029472329914697, 250.0060000000000002, 0, 0, -1, 0.0004912366850494822397, 1, False, 0, 0)
+Set myDisplayDim = Part.AddDimension2(0.1998709318576716021, 0.1270792107350607325, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.ActivateView("Drawing View2")
+boolstatus = Part.Extension.SelectByRay(0.2387364225277629759, 0.1093080012482517266, 250.0060000000000002, 0, 0, -1, 0.0004912366850494822397, 1, False, 0, 0)
+Set myDisplayDim = Part.AddDimension2(0.2283337633149503942, 0.09095886624612822824, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByRay(0.2413370873309661213, 0.0896585338462724396, 250.0060000000000002, 0, 0, -1, 0.0004912366850494822397, 1, False, 0, 0)
+Set myDisplayDim = Part.AddDimension2(0.2566521133942734623, 0.07636624707259948019, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.ActivateView("Drawing View2")
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.Extension.SelectByRay(0.2296340957165519947, 0.1364705003039290154, 250.0060000000000002, 0, 0, -1, 0.0004912366850494822397, 1, False, 0, 0)
+Set myDisplayDim = Part.AddDimension2(0.2291922243695411476, 0.178225618531389185, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.ActivateView("Drawing View2")
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByRay(0.224866210244012904, 0.1402270161307779817, 250.0060000000000002, 0, 0, -1, 0.0004912366850494822397, 1, False, 0, 0)
+Set myDisplayDim = Part.AddDimension2(0.2095511841807055353, 0.1781541157580230073, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet1")
+Part.ClearSelection2 True
+Part.EditUndo2 1
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.Extension.SelectByID2("DetailItem242@Sheet1", "GTOL", 0.2011712642592731748, 0.1708570682556469489, 0, False, 0, Nothing, 0)
+Part.EditDelete
+boolstatus = Part.ActivateView("Drawing View2")
+boolstatus = Part.Extension.SelectByRay(0.2244327661101457039, 0.1397935719969108093, 250.0060000000000002, 0, 0, -1, 0.0004912366850494822397, 1, False, 0, 0)
+Set myDisplayDim = Part.AddDimension2(0.2057946683538565413, 0.1781541157580230073, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet1")
+Part.SetPickMode
+Part.ClearSelection2 True
+boolstatus = Part.ActivateView("Drawing View2")
+boolstatus = Part.Extension.SelectByRay(0.2427819011105234182, 0.1402270161307779817, 250.0060000000000002, 0, 0, -1, 0.0004912366850494822397, 1, False, 0, 0)
+boolstatus = Part.Extension.SelectByID2("DetailItem243@Drawing View2", "GTOL", 0.2761570994182970251, 0.1795259509329907577, 0, False, 0, Nothing, 0)
+Part.SetPickMode
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Sheet1")
+Part.SetPickMode
+Part.EditTemplate
+Part.EditSketch
+boolstatus = Part.Extension.SelectByID2("DetailItem238@Sheet Format1", "NOTE", 0.248634421810613071, 0.04077072851016755317, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("DetailItem226@Sheet Format1", "NOTE", 0.1245037959148400375, 0.04185245767128888128, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("DetailItem209@Sheet Format1", "NOTE", 0.1149204346656775566, 0.05274264090897352875, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+Part.EditTemplate
+Part.EditSheet
+Part.EditSketch
+Part.EditTemplate
+Part.EditSketch
+boolstatus = Part.Extension.SelectByID2("Sheet Format1", "SHEET", 0.1801422606563249651, 0.02043535659391954029, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("DetailItem223@Sheet Format1", "NOTE", 0.1832537415813777215, 0.02167994896394065396, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+Part.EditTemplate
+Part.EditSheet
+Part.EditSketch
+
+' Zoom To Fit
+Part.ViewZoomtofit2
+
+' Zoom To Fit
+Part.ViewZoomtofit2
+
+' Zoom To Fit
+Part.ViewZoomtofit2
+
+' Save As
+longstatus = Part.SaveAs3("C:\Courses\Year 3\MSE 2202B\Git\project-pdf-team-005-5\Solidworks\Motor\Motor Mount.SLDDRW", 0, 0)
+Set Part = swApp.ActiveDoc
+Set myModelView = Part.ActiveView
+myModelView.FrameLeft = 0
+myModelView.FrameTop = 33
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+swApp.ActivateDoc2 "Robot Assembly", False, longstatus
+Set Part = swApp.ActiveDoc
+
+' Open
+Set Part = swApp.OpenDoc6("C:\Courses\Year 3\MSE 2202B\Git\project-pdf-team-005-5\Solidworks\Servos\S90 Servo Motor.SLDPRT", 1, 0, "", longstatus, longwarnings)
+
+' Open
+Set Part = swApp.OpenDoc6("C:\Courses\Year 3\MSE 2202B\Git\project-pdf-team-005-5\Solidworks\Sensor\Ultrasonic Sensor.SLDPRT", 1, 0, "", longstatus, longwarnings)
+
+' Open
+Set Part = swApp.OpenDoc6("C:\Courses\Year 3\MSE 2202B\Git\project-pdf-team-005-5\Solidworks\Container\Container + Sheath v3.SLDPRT", 1, 0, "", longstatus, longwarnings)
+
+' Open
+Set Part = swApp.OpenDoc6("C:\Courses\Year 3\MSE 2202B\Git\project-pdf-team-005-5\Solidworks\Wheels\Roller_Wheels.SLDPRT", 1, 0, "", longstatus, longwarnings)
+
+' Open
+Set Part = swApp.OpenDoc6("C:\Courses\Year 3\MSE 2202B\Git\project-pdf-team-005-5\Solidworks\Color Sensor\Color Sensor Mount.SLDPRT", 1, 0, "", longstatus, longwarnings)
+
+' Open
+Set Part = swApp.OpenDoc6("C:\Courses\Year 3\MSE 2202B\Git\project-pdf-team-005-5\Solidworks\Chassis\M2.SLDPRT", 1, 0, "", longstatus, longwarnings)
+
+' Redraw
+Part.GraphicsRedraw2
+Set Part = swApp.ActiveDoc
+Set myModelView = Part.ActiveView
+myModelView.FrameLeft = 0
+myModelView.FrameTop = 33
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+swApp.ActivateDoc2 "Funnel - Sheet1", False, longstatus
+Set Part = swApp.ActiveDoc
+
+' Redraw
+Part.GraphicsRedraw2
+boolstatus = Part.ActivateView("Drawing View2")
+boolstatus = Part.ActivateView("Drawing View1")
+boolstatus = Part.ActivateSheet("Sheet1")
+boolstatus = Part.ActivateView("Drawing View4")
+boolstatus = Part.ActivateSheet("Sheet1")
+Dim skSegment As Object
+Set skSegment = Part.SketchManager.CreateLine(0.326725, 0.275816, 0.000000, 0.326725, 0.263134, 0.000000)
+Set skSegment = Part.SketchManager.CreateLine(0.326725, 0.263134, 0.000000, 0.342806, 0.267448, 0.000000)
+Set skSegment = Part.SketchManager.CreateLine(0.342806, 0.267448, 0.000000, 0.342806, 0.272809, 0.000000)
+Set skSegment = Part.SketchManager.CreateLine(0.342806, 0.272809, 0.000000, 0.326725, 0.275816, 0.000000)
+Part.SetPickMode
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("Sheet1", "SHEET", 0.3403222587541378519, 0.2724164493689971156, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Line4", "SKETCHSEGMENT", 0.3401915189649243887, 0.2732008881042777837, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Line2", "SKETCHSEGMENT", 0.3387533812835765712, 0.2665331588543924379, 0, True, 0, Nothing, 0)
+Part.SketchAddConstraints "sgSAMELENGTH"
+Part.ClearSelection2 True
+Set skSegment = Part.SketchManager.CreateCircle(0.351435, 0.269475, 0.000000, 0.351697, 0.274378, 0.000000)
+Part.ClearSelection2 True
+Set skSegment = Part.SketchManager.CreateCircle(0.351435, 0.269475, 0.000000, 0.351958, 0.271763, 0.000000)
+
+' Zoom To Fit
+Part.ViewZoomtofit2
+
+' Zoom To Fit
+Part.ViewZoomtofit2
+
+' Zoom To Fit
+Part.ViewZoomtofit2
+
+' Save
+Dim swErrors As Long
+Dim swWarnings As Long
+boolstatus = Part.Save3(1, swErrors, swWarnings)
+' MSGBOX
+' Save changes to Robot Assembly?
+
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+Set Part = swApp.ActiveDoc
+Set myModelView = Part.ActiveView
+myModelView.FrameLeft = 0
+myModelView.FrameTop = 0
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+swApp.ActivateDoc2 "Motor Mount", False, longstatus
+Set Part = swApp.ActiveDoc
+Part.ClearSelection2 True
+Set Part = swApp.ActiveDoc
+Set myModelView = Part.ActiveView
+myModelView.FrameLeft = 0
+myModelView.FrameTop = 33
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+swApp.ActivateDoc2 "Robot Assembly", False, longstatus
+Set Part = swApp.ActiveDoc
+Set Part = swApp.ActiveDoc
+Set myModelView = Part.ActiveView
+myModelView.FrameLeft = 0
+myModelView.FrameTop = 0
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+swApp.ActivateDoc2 "Motor Mount", False, longstatus
+Set Part = swApp.ActiveDoc
+Set Part = swApp.ActiveDoc
+Set myModelView = Part.ActiveView
+myModelView.FrameLeft = 0
+myModelView.FrameTop = 33
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+swApp.ActivateDoc2 "N20 3v-6v Motor", False, longstatus
+Set Part = swApp.ActiveDoc
+Set Part = swApp.ActiveDoc
+Set myModelView = Part.ActiveView
+myModelView.FrameLeft = 0
+myModelView.FrameTop = 33
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+swApp.ActivateDoc2 "S90 Servo Motor", False, longstatus
+Set Part = swApp.ActiveDoc
+Set Part = swApp.ActiveDoc
+Set myModelView = Part.ActiveView
+myModelView.FrameLeft = 0
+myModelView.FrameTop = 33
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+swApp.ActivateDoc2 "Ultrasonic Sensor", False, longstatus
+Set Part = swApp.ActiveDoc
+Set Part = swApp.ActiveDoc
+Set myModelView = Part.ActiveView
+myModelView.FrameLeft = 0
+myModelView.FrameTop = 33
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+swApp.ActivateDoc2 "Container + Sheath v3", False, longstatus
+Set Part = swApp.ActiveDoc
+Set Part = swApp.ActiveDoc
+Set myModelView = Part.ActiveView
+myModelView.FrameLeft = 0
+myModelView.FrameTop = 33
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+swApp.ActivateDoc2 "Roller_Wheels", False, longstatus
+Set Part = swApp.ActiveDoc
+Set Part = swApp.ActiveDoc
+Set myModelView = Part.ActiveView
+myModelView.FrameLeft = 0
+myModelView.FrameTop = 33
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+swApp.ActivateDoc2 "Color Sensor Mount", False, longstatus
+Set Part = swApp.ActiveDoc
+Set Part = swApp.ActiveDoc
+Set myModelView = Part.ActiveView
+myModelView.FrameLeft = 0
+myModelView.FrameTop = 33
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+swApp.ActivateDoc2 "M2", False, longstatus
+Set Part = swApp.ActiveDoc
+swApp.ExitApp
+End Sub
